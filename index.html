@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmegaTech | Food Safety Technology Research and Development</title>
+<meta name="description" content="OmegaTech (Omega Foodtech) is a concept-stage food-safety technology startup exploring AI-assisted screening for potentially harmful substances in food. Seeking development funding.">
+<meta property="og:title" content="OmegaTech: A Smarter Approach to Food Safety">
+<meta property="og:description" content="Concept-stage food-safety technology startup seeking development funding and research partners.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101C35'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23E8C547' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101C35;--dark:#091326;--yellow:#E8C547;--gold:#D6B544;--bg:#F5F7FA;--text:#293449;--muted:#64748B;--line:#DCE2EB}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font:17px/1.65 Inter,system-ui,sans-serif;color:var(--text);background:#fff}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:var(--navy);margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3.4rem)}h2{font-size:clamp(1.6rem,4vw,2.3rem)}h3{font-size:1.2rem}
+a{color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 20px}section{padding:64px 0}
+.dark{background:linear-gradient(160deg,var(--dark),var(--navy));color:#E6EBF5}.dark h1,.dark h2,.dark h3{color:#fff}
+.alt{background:var(--bg)}.eyebrow{color:var(--gold);letter-spacing:.14em;font-size:.8rem;font-weight:600}
+.btn{display:inline-block;padding:13px 22px;min-height:44px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--yellow);cursor:pointer;font:inherit;font-weight:600}
+.btn.p{background:var(--yellow);color:var(--navy)}.btn.s{background:none;color:#fff}.btn.p:hover{background:var(--gold)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+header{position:sticky;top:0;z-index:9;background:var(--dark);border-bottom:1px solid #22304f}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.logo{font-family:'Playfair Display',serif;font-weight:700;color:#fff;text-decoration:none;font-size:1.25rem}.logo b{color:var(--yellow)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}nav a{color:#E6EBF5;text-decoration:none;font-size:.92rem}
+#menu{display:none;background:none;border:1px solid #3a4a6e;color:#fff;border-radius:8px;min-width:44px;min-height:44px;font-size:1.3rem}
+@media(max-width:900px){#menu{display:block}nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--dark);flex-direction:column;padding:16px 20px;align-items:flex-start}nav ul.open{display:flex}nav li{padding:6px 0}}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+.hero{display:grid;gap:36px;align-items:center;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.badge{display:inline-block;border:1px solid var(--yellow);color:var(--yellow);border-radius:99px;padding:4px 14px;font-size:.8rem;margin:10px 0 20px}
+.cap{font-size:.78rem;color:var(--yellow);text-align:center;margin-top:8px;letter-spacing:.06em}
+.callout{border-left:5px solid var(--yellow);background:var(--navy);color:#fff;padding:22px;border-radius:8px;font-size:1.15rem;font-family:'Playfair Display',serif}
+.big{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,8vw,4rem);color:var(--navy)}
+.bar{display:grid;grid-template-columns:minmax(120px,1.4fr) 3fr auto;gap:10px;align-items:center;margin:10px 0;font-size:.92rem}
+.track{background:var(--line);border-radius:6px;height:14px}.fill{background:var(--yellow);height:100%;border-radius:6px;border-right:2px solid var(--gold)}
+@media(max-width:600px){.bar{grid-template-columns:1fr auto}.bar .track{grid-column:1/-1}}
+.step{border-left:3px solid var(--yellow);padding:0 0 22px 20px;margin-left:8px}.step ul{margin:6px 0 0;padding-left:18px}
+details{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:10px 0;background:#fff}summary{cursor:pointer;font-weight:600;min-height:28px}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 4px}input,select,textarea{width:100%;padding:12px;border:1px solid #a9b4c6;border-radius:8px;font:inherit;min-height:44px}
+.err{color:#B3261E;font-size:.85rem;min-height:1.1em}.msg{padding:14px;border-radius:8px;margin-top:14px}.ok{background:#E7F6EC}.bad{background:#FDECEA}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.tabs button{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 16px;min-height:44px;font:inherit;cursor:pointer}.tabs button[aria-pressed=true]{background:var(--navy);color:#fff}
+footer{background:var(--dark);color:#B8C3D9;padding:40px 0;font-size:.88rem}footer a{color:var(--yellow)}
+.small{font-size:.85rem;color:var(--muted)}.dark .small{color:#B8C3D9}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#home">Omega<b>Tech</b></a>
+<button id="menu" aria-expanded="false" aria-controls="links" aria-label="Toggle menu">☰</button>
+<ul id="links">
+<li><a href="#home">Home</a></li><li><a href="#mission">Our Mission</a></li><li><a href="#technology">Technology</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#investment">Investment Opportunity</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact</a></li>
+<li><a class="btn p" href="#enquiry">Investor Enquiries</a></li></ul></nav></div></header>
+
+<main>
+<section id="home" class="dark"><div class="wrap hero">
+<div><div class="eyebrow">FOOD SAFETY INNOVATION</div>
+<h1>A Smarter Approach to Food Safety Starts Here.</h1>
+<p>OmegaTech is developing a technology concept designed to help identify potentially harmful substances in food and explore new approaches to accessible food-safety screening.</p>
+<div class="badge">Development Stage: Concept</div><br>
+<a class="btn p" href="#technology">Explore Our Technology</a> <a class="btn s" href="#enquiry">Investor Enquiries</a>
+<p class="small" style="margin-top:18px">Be in control of what's on your plate. Feel safer about what's in your food.</p></div>
+<figure style="margin:0"><svg viewBox="0 0 320 380" role="img" aria-label="Illustrative concept drawing of a portable device with a touchscreen" style="width:100%;max-width:340px;display:block;margin:auto">
+<rect x="70" y="20" width="180" height="340" rx="28" fill="#091326" stroke="#E8C547" stroke-width="3"/><rect x="88" y="52" width="144" height="190" rx="12" fill="#101C35" stroke="#3a4a6e"/>
+<circle cx="160" cy="147" r="40" fill="none" stroke="#E8C547" stroke-width="3" stroke-dasharray="6 8"/><circle cx="160" cy="147" r="8" fill="#E8C547"/>
+<rect x="110" y="262" width="100" height="14" rx="7" fill="#22304f"/><rect x="125" y="296" width="70" height="30" rx="15" fill="none" stroke="#E8C547"/></svg>
+<figcaption class="cap">ILLUSTRATIVE CONCEPT DESIGN — NOT A WORKING PROTOTYPE</figcaption></figure></div></section>
+
+<section id="mission"><div class="wrap">
+<h2>Why food safety matters</h2>
+<p>Households, food-service businesses and food producers all depend on food being safe. Appearance, smell and taste alone cannot reliably reveal certain contaminants. Different hazards need different testing methods, so a single handheld detector for many substances would require substantial research and validation. OmegaTech exists to explore whether that gap can be narrowed responsibly.</p>
+<div class="grid">
+<div class="card"><h3>Mission</h3><p>To advance the development of intelligent food-safety technology that could help people and organisations make better-informed decisions about the safety of food.</p></div>
+<div class="card"><h3>Vision</h3><p>To contribute to a future in which scientifically validated food-safety screening technologies become more accessible to people and organisations around the world.</p></div>
+<div class="card"><h3>Commitment</h3><p>Feasibility before scaling, honest limits, and validation against accepted reference methods.</p></div></div>
+<div class="callout" style="margin-top:28px">OmegaTech is currently at the concept stage and is seeking development funding.</div></div></section>
+
+<section id="technology" class="alt"><div class="wrap">
+<h2>The technology concept</h2>
+<p>The concept is a portable, user-friendly device, possibly with a touchscreen, intended to help screen food for certain potentially harmful substances. <strong>Target contaminants, detectable concentrations, sample preparation, detection limits and measurement methods have not yet been established.</strong> Actual capabilities will depend on research and validation.</p>
+<h3>Conceptual workflow (final method depends on feasibility research)</h3>
+<div class="grid"><div class="card"><strong>1. Prepare</strong><p>An appropriate sample or measurement setup, depending on the eventual design.</p></div><div class="card"><strong>2. Analyse</strong><p>A scientifically validated sensing and analysis process.</p></div><div class="card"><strong>3. Interpret</strong><p>An interpretable result with clearly defined limitations.</p></div></div>
+<h3 style="margin-top:28px">Development directions</h3>
+<div class="grid">
+<div class="card"><h3>Intelligent Sensing Research</h3><p>Analytical, spectroscopic or chemical sensing methods, where scientifically appropriate.</p></div>
+<div class="card"><h3>AI-Assisted Data Analysis</h3><p>Signal interpretation, with attention to data quality and uncertainty. AI is used only where its role can be justified.</p></div>
+<div class="card"><h3>Accessible Screening</h3><p>Exploring whether screening can become simpler for non-specialists.</p></div>
+<div class="card"><h3>Validation and Responsible Engineering</h3><p>Calibration, repeatability, reliability and laboratory reference testing.</p></div></div>
+<h3 style="margin-top:28px">Detection is not neutralisation</h3>
+<p>Detecting a contaminant and safely neutralising it are separate research challenges. Neutralisation would need contaminant-specific methods, evidence of effectiveness, and proof that treatment creates no new hazards. <strong>OmegaTech makes no claim that the concept can neutralise harmful substances.</strong></p>
+<h3>Scientific validation</h3>
+<p>Development will require reference methods, controlled testing, independent expertise, and evaluation of false positives, false negatives, sensitivity and specificity.</p>
+<h3>Frequently asked questions</h3><div id="faq"></div></div></section>
+
+<section id="roadmap"><div class="wrap"><h2>Development roadmap</h2>
+<p class="small">Proposed stages, not completed milestones. No completion dates are promised.</p><div id="steps"></div></div></section>
+
+<section id="investment" class="alt"><div class="wrap">
+<h2>Investment opportunity</h2>
+<div class="grid"><div class="card"><div class="small">Funding target</div><div class="big" id="total"></div><p class="small">A fundraising target, not a company valuation.</p></div>
+<div class="card"><p><strong>Stage:</strong> Seeking initial development funding.<br><strong>Current status:</strong> Concept, no working prototype.</p><p>To support scientific feasibility research, technical design, prototype development, testing, and the foundational work required to assess OmegaTech's commercial potential.</p></div></div>
+<h3 style="margin-top:28px">Proposed funding allocation</h3>
+<p class="small">Proposed allocation, subject to technical assessment, supplier quotations, and refinement during development planning. Illustrative only.</p>
+<div id="budget" role="list"></div><div class="bar" style="border-top:2px solid var(--navy);font-weight:600"><span>Total</span><span></span><span id="sum"></span></div>
+<h3 style="margin-top:28px">What the funding is intended to produce</h3>
+<ul><li>A documented feasibility assessment and technical requirements specification</li><li>A prototype design and, if feasible, an initial engineering prototype</li><li>Documented preliminary testing, and validation results where testing is completed</li><li>An assessment of regulatory and commercial requirements</li></ul>
+<p>Technical feasibility remains an important uncertainty; success is not guaranteed.</p>
+<h3>Why consider OmegaTech</h3>
+<p>A clear problem area, a defined initial objective, potential relevance across several food-related settings, and a roadmap that establishes feasibility before scaling. No returns, exit or equity appreciation are promised.</p>
+<h3>Risks and uncertainties</h3>
+<ul><li>Technical feasibility and detection performance may fall short</li><li>Prototype costs and validation timelines may exceed expectations</li><li>Regulatory requirements, market adoption and competition</li><li>Intellectual property considerations</li><li>Further funding may be required</li></ul>
+<p>Prospective investors should conduct their own due diligence and take independent legal and financial advice. <strong>Funding structure:</strong> not yet defined; it will be established through appropriate legal and financial advice. This website does not accept money or offer securities.</p>
+<h3>Investor documents</h3>
+<p>The investor overview, roadmap and detailed budget are available on request. <a href="#enquiry">Request the Investor Brief</a>.</p></div></section>
+
+<section id="enquiry"><div class="wrap"><h2>Enquiries</h2>
+<div class="tabs" role="group" aria-label="Enquiry type"></div>
+<form id="form" novalidate class="card" style="max-width:640px">
+<label for="name">Full name</label><input id="name" name="name" autocomplete="name" required><div class="err" data-for="name"></div>
+<label for="email">Professional email</label><input id="email" name="email" type="email" autocomplete="email" required><div class="err" data-for="email"></div>
+<label for="org">Organisation (optional)</label><input id="org" name="organisation">
+<div id="extra"></div>
+<label for="message">Message <span id="mreq"></span></label><textarea id="message" name="message" rows="4"></textarea><div class="err" data-for="message"></div>
+<label style="font-weight:400"><input type="checkbox" id="consent" style="width:auto;min-height:0"> I agree to the <a href="#privacy">privacy notice</a>.</label><div class="err" data-for="consent"></div>
+<p class="small">Do not send bank details, ID documents or financial credentials.</p>
+<button class="btn p" type="submit" id="send">Send enquiry</button><div id="status" role="status" aria-live="polite"></div></form></div></section>
+
+<section id="about" class="alt"><div class="wrap"><h2>About us and the founder</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start">
+<img src="FB_IMG_1741348426257.jpg" alt="Portrait of founder Mariah Carelle" loading="lazy" style="width:100%;max-width:320px;border-radius:12px" onerror="this.style.display='none'">
+<div><h3 id="fname"></h3><p id="fbio"></p><p class="small">Founder biography is editable in CONFIG. Qualifications and affiliations are not stated until supplied.</p></div></div></div></section>
+
+<section id="contact"><div class="wrap"><h2>Contact and partnerships</h2>
+<p>We welcome discussions with food scientists, analytical chemists, electronics and AI engineers, university teams, testing laboratories, food businesses and accelerators. No organisation is implied to be an existing partner.</p>
+<div class="grid" id="contacts"></div></div></section>
+
+<section id="privacy" class="alt"><div class="wrap"><h2>Privacy and disclosures</h2>
+<p><strong>Privacy notice.</strong> Enquiry forms collect your name, email, optional organisation, category and message solely to respond to you. Contact us at the email below about your data. <em>Draft text: have it reviewed before launch.</em></p>
+<p><strong>Technology disclaimer.</strong> OmegaTech's technology is under development. Nothing here establishes that a device can determine whether food is safe to eat, and it is not a substitute for established food-safety practice, accredited laboratory testing or public-health guidance.</p>
+<p><strong>Investment disclosure.</strong> This site is not an offer of securities. Investing in a pre-prototype venture carries a high risk of loss; no returns are guaranteed. Legal counsel should review this wording and the fundraising approach before public solicitation.</p></div></section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> OmegaTech (Omega Foodtech). Concept stage. <a href="#privacy">Privacy &amp; disclosures</a> · <a href="#enquiry">Enquiries</a> · <span id="femail"></span></div></footer>
+
+<script>
+/* ===== EDIT HERE: all site data lives in CONFIG ===== */
+const CONFIG={
+ currency:"USD",
+ // Set to a Formspree (or similar) endpoint URL to enable submissions. Empty = fallback to email.
+ formEndpoint:"",
+ contact:{investors:"mariahdibere@gmail.com",research:"mariahdibere@gmail.com",general:"mariahdibere@gmail.com"},
+ founder:{name:"Mariah Carelle",bio:"I made a choice that changed everything: I left school so my younger siblings could keep theirs. It was one of the hardest decisions of my life, but I believed their future was worth more than my own dreams at the time. Today, Omega Foodtech is my second chance, a vision born from sacrifice and a deep passion for protecting families. No one should ever have to question the safety of what they eat."},
+ budget:[
+  ["Research and scientific feasibility",200000],["Engineering and prototype development",300000],["Laboratory testing and validation",150000],
+  ["Equipment, materials, and suppliers",120000],["Personnel and specialist consultants",100000],["Intellectual property, legal, and regulatory work",50000],
+  ["Operations, partnerships, and contingency",80000]],
+ roadmap:[
+  ["Stage 1: Scientific Feasibility",["Define initial target contaminants and use cases","Consult qualified scientific specialists","Assess existing detection technologies","Determine realistic sensing and testing approaches","Produce a feasibility report"]],
+  ["Stage 2: Technical Architecture and Design",["Define functional requirements","Evaluate sensors, hardware, software and data processing","Develop an engineering specification","Prepare an initial prototype design"]],
+  ["Stage 3: Prototype Development",["Source appropriate components","Build an initial prototype","Integrate selected sensing and data-processing systems","Conduct preliminary engineering tests"]],
+  ["Stage 4: Testing and Validation",["Compare against appropriate reference methods","Evaluate repeatability and reliability","Investigate false-positive and false-negative rates","Document limitations and further testing needed"]],
+  ["Stage 5: Future Commercialisation Assessment",["Assess manufacturing feasibility","Identify potential pilot partners","Determine regulatory and certification requirements","Explore applications, pricing, distribution and support"]]],
+ faq:[
+  ["Does the OmegaTech device already exist?","No. OmegaTech is at the concept stage."],
+  ["Is there a working prototype?","No. Any image on this site is an illustrative concept."],
+  ["What substances will it target?","Not yet decided. Targets will be defined during feasibility work."],
+  ["How will detection accuracy be established?","Through comparison with reference methods and controlled testing, including false-positive and false-negative rates, with independent expertise."],
+  ["Will it suit households and commercial users?","That is a long-term aim, subject to what research and validation show."],
+  ["Can it neutralise contaminants?","No such capability is claimed. Neutralisation is a separate research problem."],
+  ["When might a product become available?","Unknown. No date is promised."],
+  ["How can researchers or specialists collaborate?","Use the collaboration enquiry form below."]],
+ types:{
+  investor:{label:"Investor",to:"investors",msgRequired:false,extra:[["category","Investor category",["Individual investor","Angel investor","Institutional investor","Venture fund","Other"]],["interest","Area of interest",["Investor brief","Discuss an investment","Contact the founder"]]]},
+  collab:{label:"Research / Collaboration",to:"research",msgRequired:true,extra:[["interest","Area of expertise or collaboration interest",["Food science","Analytical chemistry","Electronics engineering","AI / software","University research","Laboratory testing","Industry / distribution","Accelerator / programme","Other"]]]},
+  general:{label:"General",to:"general",msgRequired:true,extra:[]}}
+};
+/* ===== rendering ===== */
+const $=s=>document.querySelector(s),esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:CONFIG.currency,maximumFractionDigits:0}).format(n);
+const total=CONFIG.budget.reduce((a,b)=>a+b[1],0);
+$("#total").textContent=fmt(total)+" "+CONFIG.currency;$("#sum").textContent=fmt(total)+" (100%)";
+$("#budget").innerHTML=CONFIG.budget.map(([n,v])=>{const p=Math.round(v/total*1000)/10;return `<div class="bar" role="listitem"><span>${esc(n)}</span><span class="track" aria-hidden="true"><span class="fill" style="display:block;width:${p}%"></span></span><span>${fmt(v)} (${p}%)</span></div>`}).join("");
+$("#steps").innerHTML=CONFIG.roadmap.map(([t,l])=>`<div class="step"><h3>${esc(t)}</h3><ul>${l.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
+$("#faq").innerHTML=CONFIG.faq.map(([q,a])=>`<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
+$("#fname").textContent=CONFIG.founder.name;$("#fbio").textContent=CONFIG.founder.bio;$("#yr").textContent=new Date().getFullYear();
+$("#femail").innerHTML=`<a href="mailto:${esc(CONFIG.contact.general)}">${esc(CONFIG.contact.general)}</a>`;
+$("#contacts").innerHTML=[["Investors","investors"],["Research collaborators","research"],["General enquiries","general"]].map(([l,k])=>`<div class="card"><h3>${l}</h3><a href="mailto:${esc(CONFIG.contact[k])}">${esc(CONFIG.contact[k])}</a></div>`).join("");
+$("#menu").onclick=()=>{const o=$("#links").classList.toggle("open");$("#menu").setAttribute("aria-expanded",o)};
+$("#links").onclick=e=>{if(e.target.tagName==="A"){$("#links").classList.remove("open");$("#menu").setAttribute("aria-expanded",false)}};
+/* ===== forms ===== */
+let type="investor";
+const tabs=$(".tabs");
+tabs.innerHTML=Object.entries(CONFIG.types).map(([k,t])=>`<button type="button" data-t="${k}">${esc(t.label)}</button>`).join("");
+function setType(k){type=k;const t=CONFIG.types[k];
+ tabs.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===k));
+ $("#extra").innerHTML=t.extra.map(([id,l,o])=>`<label for="${id}">${esc(l)}</label><select id="${id}" name="${id}" required><option value="">Select…</option>${o.map(x=>`<option>${esc(x)}</option>`).join("")}</select><div class="err" data-for="${id}"></div>`).join("");
+ $("#mreq").textContent=t.msgRequired?"":"(optional)";$("#status").innerHTML="";}
+tabs.onclick=e=>{if(e.target.dataset.t)setType(e.target.dataset.t)};setType("investor");
+document.querySelectorAll('a[href="#enquiry"]').forEach(a=>a.addEventListener("click",()=>{}));
+$("#form").addEventListener("submit",async e=>{
+ e.preventDefault();const f=e.target,t=CONFIG.types[type],err={};
+ const v=id=>(f.elements[id]?f.elements[id].value.trim():"");
+ if(!v("name"))err.name="Please enter your name.";
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("email")))err.email="Please enter a valid email address.";
+ t.extra.forEach(([id])=>{if(!v(id))err[id]="Please choose an option."});
+ if(t.msgRequired&&!v("message"))err.message="Please enter a message.";
+ if(!$("#consent").checked)err.consent="Consent to the privacy notice is required.";
+ document.querySelectorAll(".err").forEach(d=>d.textContent=err[d.dataset.for]||"");
+ const first=Object.keys(err)[0];if(first){(f.elements[first]||$("#consent")).focus();return}
+ const data={type,name:v("name"),email:v("email"),organisation:v("org"),message:v("message")};t.extra.forEach(([id])=>data[id]=v(id));
+ const st=$("#status"),to=CONFIG.contact[t.to];
+ if(!CONFIG.formEndpoint){const body=Object.entries(data).map(([k,x])=>k+": "+x).join("\n");
+  st.innerHTML=`<div class="msg bad">Online submission is not configured yet, so nothing has been sent. Please <a href="mailto:${esc(to)}?subject=${encodeURIComponent("OmegaTech enquiry: "+t.label)}&body=${encodeURIComponent(body)}">email us directly</a>.</div>`;return}
+ const btn=$("#send");btn.disabled=true;btn.textContent="Sending…";
+ try{const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(data)});
+  if(!r.ok)throw 0;st.innerHTML='<div class="msg ok">Thank you. Your enquiry has been sent.</div>';f.reset();setType(type)}
+ catch{st.innerHTML=`<div class="msg bad">Sorry, sending failed. Please email <a href="mailto:${esc(to)}">${esc(to)}</a>.</div>`}
+ btn.disabled=false;btn.textContent="Send enquiry";});
+</script>
+</body>
+</html>
